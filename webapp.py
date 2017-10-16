@@ -13,7 +13,7 @@ def render_giga():
         reply = gigaAmount * 2000000000       
         return render_template('gigaConversions.html', response = reply)
     else: 
-        return render_templat('gigaConversions.html')
+        return render_template('gigaConversions.html')
     
 if __name__=="__main__":
     app.run(debug=False, port=54321)

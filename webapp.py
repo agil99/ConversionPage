@@ -16,7 +16,7 @@ def render_giga():
         return render_template('gigaConversions.html')
     
 @app.route("/yearToHour.html")
-def render_years):
+def render_years():
     if 'years' in request.args:
         years = float(request.args["years"])
         reply = years * 8766

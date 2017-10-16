@@ -15,5 +15,14 @@ def render_giga():
     else: 
         return render_template('gigaConversions.html')
     
+@app.route("/yearToHour.html")
+def render_years):
+    if 'years' in request.args:
+        years = float(request.args["years"])
+        reply = years * 8766
+        return render_template('yearToHour.html', response = reply)
+    else: 
+        return render_template('yearToHour.html')    
+
 if __name__=="__main__":
     app.run(debug=False, port=54321)

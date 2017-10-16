@@ -10,6 +10,6 @@ def render_main():
 def render_response():
     gigaAmount = request.args["giga"]
     reply = gigaAmount * 2000000000
-    return render_template("gigaConversions.html", response = reply)
+    return render_template("response.html", response = reply)
 if __name__=="__main__":
     app.run(debug=False, port=54321)

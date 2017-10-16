@@ -9,7 +9,7 @@ def render_main():
 @app.route("/giga")
 def render_giga():
     if 'giga' in request.args:
-        gigaAmount = request.args["giga"]
+        gigaAmount = float(request.args["giga"])
         reply = gigaAmount * 2000000000       
         return render_template('gigaConversions.html', response = reply)
     else: 

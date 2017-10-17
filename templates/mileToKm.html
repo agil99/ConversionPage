@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Mile Conversion</title>
-  </head>
-  <body>
+{% extends "layout.html" %}
+{% set active_page ="mileToKm" %}
 
-    <form action='/mileToKm.html'>
-      Enter the amount of miles you want to convert to kilometers.<br>
-      <input type="text" name="miles">
-      <br><br>
-      <input type="submit">
-    </form>
-    <h1>Response:</h1>
-    <p> {{ response }} kilometers </p>
-  </body>
-</html>
+{% block title %}Miles to Kilometers{% endblock %}
+
+{% block content %}
+    <center>
+        <form action='/mileToKm'>
+          Enter a number of miles.<br>
+          <input type="text" name="miles">
+          <br><br>
+          <input type="submit">
+        </form>
+        {% if response is defined %}
+            <p>There are {{ response }} kilometers.</p>
+        {% endif %}
+    </center>
+{% endblock %}

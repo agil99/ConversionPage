@@ -24,5 +24,13 @@ def render_years():
     else: 
         return render_template('yearToHour.html')    
 
+@app.route("/mileToKm.html")
+def render_mile():
+    if 'miles' in request.args:
+        miles = float(request.args["giga"])
+        reply = miles * 1.609       
+        return render_template('mileToKm.html', response = reply)
+    else: 
+        return render_template('mileToKm.html')
 if __name__=="__main__":
     app.run(debug=False, port=54321)

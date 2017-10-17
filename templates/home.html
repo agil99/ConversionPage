@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Home</title>
-  </head>
-  <body>
-    <a href = "gigaConversions.html">GB to Nybble</a><br><br>
-    <a href = "yearToHour.html">Years to Hours</a><br><br>
-    <a href = "mileToKm.html">Miles to Kilometers</a>
-  </body>
-</html>
+{% extends "layout.html" %}
+{% set active_page ="home" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <center>
+    <h1>X -> Y</h1>
+  </center>
+{% endblock %}

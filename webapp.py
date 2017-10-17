@@ -6,7 +6,7 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 def render_main():
     return render_template('home.html')
 
-@app.route("/gigaConversions.html")
+@app.route("/nybbles")
 def render_giga():
     if 'giga' in request.args:
         gigaAmount = float(request.args["giga"])
@@ -15,7 +15,7 @@ def render_giga():
     else: 
         return render_template('gigaConversions.html')
     
-@app.route("/yearToHour.html")
+@app.route("/years")
 def render_years():
     if 'years' in request.args:
         years = float(request.args["years"])
@@ -24,7 +24,7 @@ def render_years():
     else: 
         return render_template('yearToHour.html')    
 
-@app.route("/mileToKm.html")
+@app.route("/miles")
 def render_mile():
     if 'miles' in request.args:
         miles = float(request.args["miles"])

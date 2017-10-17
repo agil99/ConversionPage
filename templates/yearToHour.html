@@ -1,18 +1,18 @@
+{% extends "layout.html" %}
+{% set active_page ="yearToHour" %}
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Years to Hours</title>
-  </head>
-  <body>
+{% block title %}Years in Hours{% endblock %}
 
-    <form action='/yearToHour.html'>
-      Enter the amount of years you want to convert to hours.<br>
-      <input type="text" name="years">
-      <br><br>
-      <input type="submit">
-    </form>
-    <h1>Response:</h1>
-    <p> {{ response }} hours</p>
-  </body>
-</html>
+{% block content %}
+    <center>
+        <form action='/years'>
+          Enter an amount of money.<br>
+          <input type="text" name="years">
+          <br><br>
+          <input type="submit">
+        </form>
+        {% if response is defined %}
+            <p>There are {{ response }} years.</p>
+        {% endif %}
+    </center>
+{% endblock %}

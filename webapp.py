@@ -27,7 +27,7 @@ def render_years():
 @app.route("/mileToKm.html")
 def render_mile():
     if 'miles' in request.args:
-        miles = float(request.args["giga"])
+        miles = float(request.args["miles"])
         reply = miles * 1.609       
         return render_template('mileToKm.html', response = reply)
     else: 

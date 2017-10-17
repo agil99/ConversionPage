@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Giga Conversion</title>
-  </head>
-  <body>
+{% extends "layout.html" %}
+{% set active_page ="burritos" %}
 
-    <form action='/gigaConversions.html'>
-      Enter the amount of GB's you want to convert to nybbles.<br>
-      <input type="text" name="giga">
-      <br><br>
-      <input type="submit">
-    </form>
-    <h1>Response:</h1>
-    <p> {{ response }} nybbles </p>
-  </body>
-</html>
+{% block title %}Gigabytes to Nybbles{% endblock %}
+
+{% block content %}
+    <center>
+        <form action='/gigaConversion'>
+          Enter an amount of gigabytes.<br>
+          <input type="text" name="giga">
+          <br><br>
+          <input type="submit">
+        </form>
+        {% if response is defined %}
+            <p>There are {{ response }} nybbles.</p>
+        {% endif %}
+    </center>
+{% endblock %}
